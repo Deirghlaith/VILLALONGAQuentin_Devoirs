@@ -100,7 +100,7 @@ while 1:
     for k in listeDeTortues:
         k.forward(pas)
 
-        facteurAleatoire = random.randint(0, 3)
+        facteurAleatoire = random.randint(0, 2)
         if facteurAleatoire == 0:
             k.left(90)
         elif facteurAleatoire == 1:
