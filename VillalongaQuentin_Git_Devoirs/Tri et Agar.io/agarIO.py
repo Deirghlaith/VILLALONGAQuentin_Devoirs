@@ -71,9 +71,11 @@ def distance(A, B):
 
 #Dessin d'une marche aléatoire
 pas = 3
-nbDeTortues = 6
+nbDeTortues = 15
 startingSquareWidth = 300
 listeDeTortues = []
+facteurDeTaille = 12.0
+playerSpeed = 5
 
 for i in range(nbDeTortues):
     tempTortue = turtle.Turtle()
@@ -108,9 +110,6 @@ while 1:
         else:
             pass
 
-    facteurDeTaille = 12.0
-    playerSpeed = 5
-
     maTortue.forward(playerSpeed)
 
     for k in listeDeTortues:
@@ -136,6 +135,7 @@ while 1:
                     maTortue.penup()
                 else:
                     maTortue.speed(maTortue.speed() - 2)
+                    playerSpeed /= 1.8
                     maTortue.shapesize(maTortue.shapesize()[0]* 1.5, maTortue.shapesize()[1]* 1.5)
                     k.hideturtle()
                     k.penup()
